@@ -4,7 +4,29 @@
     <meta charset="UTF-8">
     <title>Show Me the Pixel Count!!</title>
 </head>
+
+<!--Part 4: Write JavaScript for a web page that displays the current number of -->
+<!--pixels visible in the browser window. You can calculate this by -->
+<!--multiplying the screen width by the height. -->
+<!--Update these values as the screen is resized.  Hint: how_wide_is_this_window.html in the repo.-->
 <body>
+
+<p id="width"> this should adjust when the browser changes size???</p>
+
+<script>
+
+//    added this from the example. working on what to do with it
+    var width_para = document.getElementById("width");
+    width_of_window = window.innerWidth:
+    width_para.innerHTML = "Width = " + width_of_window;
+
+    window.addEventListener("resize", windowWasResized);
+
+    function windowWasResized() {
+        alert("you resized the window!");
+    }
+
+</script>
 
 </body>
 </html>
