@@ -10,22 +10,30 @@
 <!--multiplying the screen width by the height. -->
 <!--Update these values as the screen is resized.  Hint: how_wide_is_this_window.html in the repo.-->
 <body>
-
-<p id="width"> this should adjust when the browser changes size???</p>
+<!--put something in the browser-->
+<p> Pixel Count!!</p>
 
 <script>
+//    with help from Mark Fox and Week3 Github examples
 
-//    added this from the example. working on what to do with it
-    var width_para = document.getElementById("width");
-    width_of_window = window.innerWidth:
-    width_para.innerHTML = "Width = " + width_of_window;
-
+//    add event listener for window resize event
     window.addEventListener("resize", windowWasResized);
-
+//    define the function. Area = W*H
     function windowWasResized() {
-        alert("you resized the window!");
+//    use the window.innerHeight/Width properties of the window object(topmost in the browser obbject model)
+        var width_pixel = window.innerWidth;
+        var height_pixel = window.innerHeight;
+//        calculate area
+        var pixel_total = width_pixel * height_pixel;
+//        display message with new pixel total
+        alert("Pixel area  is: " + pixel_total);
+//    Note to self, this is where I started
+//    added this from the example. working on what to do with it
+//    var width_pixel = document.getElementById("width");
+//    width_of_window = window.innerWidth:
+//    width_para.innerHTML = "Width = " + width_of_window;
+//        alert("you resized the window!");
     }
-
 </script>
 
 </body>
